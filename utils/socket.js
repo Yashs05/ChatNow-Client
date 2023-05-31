@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io('https://chatnow-c646.onrender.com', {
+const socket = io('https://chatnow-49sw.onrender.com', {
     autoConnect: false
 })
 
