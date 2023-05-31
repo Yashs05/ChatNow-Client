@@ -307,11 +307,12 @@ const Profile = ({ navigation, route }) => {
               dismissableBackButton={!loading}
               style={{ backgroundColor: '#e8f3fd' }}>
 
-              <Dialog.Title>{`Edit ${updateField}`}</Dialog.Title>
+              <Dialog.Title selectionColor='black'>{`Edit ${updateField}`}</Dialog.Title>
               <Dialog.Content>
                 <TextInput
                   value={updateField === 'name' ? details.name : updateField === 'username' ? details.username : details.status}
                   selectionColor='#167BD1'
+                  textColor='black'
                   activeUnderlineColor='#167BD1'
                   maxLength={updateField === 'status' ? 100 : 25}
                   style={{ backgroundColor: 'white', height: 50, paddingHorizontal: 10 }}
@@ -325,7 +326,7 @@ const Profile = ({ navigation, route }) => {
                 />
 
                 {helperText ?
-                  <HelperText type="error" visible={true} style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
+                  <HelperText type="error" visible={true} selectionColor='#dc3545' style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
                     {updateField === 'name' ? 'Name cannot be empty' : updateField === 'username' ? 'Username cannot be empty' : 'Status cannot be empty'}
                   </HelperText> : null}
               </Dialog.Content>

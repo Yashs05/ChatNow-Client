@@ -68,6 +68,7 @@ const GroupDetails = ({ navigation, route }) => {
         <View style={{ width: '100%', marginVertical: 15 }}>
           <TextInput
             label="Group name"
+            textColor='black'
             underlineColor='#167BD1'
             activeUnderlineColor='#167BD1'
             value={groupDetails.name}
@@ -75,7 +76,7 @@ const GroupDetails = ({ navigation, route }) => {
             style={{ width: '100%', backgroundColor: 'white' }}
           />
           {nameError ?
-            <HelperText type="error" visible={true} style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
+            <HelperText type="error" selectionColor='#dc3545' visible={true} style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
               Please write a name for the group.
             </HelperText> : null}
         </View>
@@ -99,7 +100,7 @@ const GroupDetails = ({ navigation, route }) => {
         <Divider style={{ width: '100%' }} />
 
         <View style={{ width: '100%', marginVertical: 15 }}>
-          <Button icon="check" mode="contained" buttonColor='#167BD1' loading={loading} disabled={loading} onPress={handleGroupSubmit}>
+          <Button icon="check" mode="contained" buttonColor='#167BD1' textColor='white' loading={loading} disabled={loading} onPress={handleGroupSubmit}>
             Create Group
           </Button>
         </View>
@@ -111,7 +112,7 @@ const GroupDetails = ({ navigation, route }) => {
           duration={5000}
           style={{ width: '100%' }}
           onDismiss={() => setError(false)}>
-            {error}
+          {error}
         </Snackbar> :
         null}
     </View>

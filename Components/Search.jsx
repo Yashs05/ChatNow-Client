@@ -142,10 +142,11 @@ const Search = ({ navigation, route }) => {
                     placeholder='Search by name or username'
                     value={searchTerm}
                     mode='outlined'
+                    textColor='black'
                     outlineColor='#bfbfbf'
                     activeOutlineColor='#167bd1'
                     left={<TextInput.Icon icon="magnify" iconColor='#737373' />}
-                    style={{ paddingVertical: 5, marginVertical: 10 }}
+                    style={{ paddingVertical: 5, marginVertical: 10, backgroundColor: 'white' }}
                     onChangeText={text => handleChange(text)}
                     autoFocus={true}
                 />

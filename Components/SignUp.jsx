@@ -60,6 +60,7 @@ const SignUp = ({ navigation }) => {
                             label='Full name'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
                         <TextInput
@@ -68,6 +69,7 @@ const SignUp = ({ navigation }) => {
                             label='Email'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
                         <TextInput
@@ -76,6 +78,7 @@ const SignUp = ({ navigation }) => {
                             label='Username'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
                         <TextInput
@@ -86,6 +89,7 @@ const SignUp = ({ navigation }) => {
                             label='Password'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
 
@@ -95,6 +99,7 @@ const SignUp = ({ navigation }) => {
                         style={{ paddingVertical: 5, marginTop: 30, marginBottom: 20, borderRadius: 30 }}
                         mode='contained'
                         buttonColor='#167bd1'
+                        textColor='white'
                         onPress={handleSignUp}
                         labelStyle={{ fontSize: 18 }}
                         loading={loading}
@@ -107,7 +112,7 @@ const SignUp = ({ navigation }) => {
                     <Button
                         style={{ paddingVertical: 5, marginTop: 20, borderRadius: 30 }}
                         mode='outlined'
-                        textColor={theme.colors.secondary}
+                        textColor='#737373'
                         labelStyle={{ fontSize: 18 }}
                         onPress={() => navigation.navigate('SignIn')} >
                         Already have an account? Log in now.

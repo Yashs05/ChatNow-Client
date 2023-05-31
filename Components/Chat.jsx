@@ -271,7 +271,8 @@ const Chat = ({ navigation, route }) => {
           placeholder='Message'
           outlineStyle={{ borderRadius: 30, borderWidth: 0 }}
           selectionColor='#167BD1'
-          style={{ flex: 1, marginBottom: 8 }}
+          textColor='black'
+          style={{ flex: 1, marginBottom: 8, backgroundColor: 'white' }}
           right={<TextInput.Icon icon="camera" iconColor='#737373' onPress={pickFile} />}
         />
 

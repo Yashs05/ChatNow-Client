@@ -225,10 +225,11 @@ const GroupInfo = ({ navigation, route }) => {
               dismissableBackButton={!loading}
               style={{ backgroundColor: '#e8f3fd' }}>
 
-              <Dialog.Title>Edit group name</Dialog.Title>
+              <Dialog.Title selectionColor='black'>Edit group name</Dialog.Title>
               <Dialog.Content>
                 <TextInput
                   value={groupName}
+                  textColor='black'
                   selectionColor='#167BD1'
                   activeUnderlineColor='#167BD1'
                   maxLength={50}
@@ -242,7 +243,7 @@ const GroupInfo = ({ navigation, route }) => {
                 />
 
                 {helperText ?
-                  <HelperText type="error" visible={true} style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
+                  <HelperText type="error" selectionColor='#dc3545' visible={true} style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
                     Group name cannot be empty'
                   </HelperText> : null}
               </Dialog.Content>
@@ -295,7 +296,7 @@ const GroupInfo = ({ navigation, route }) => {
 
           <Portal>
             <Dialog visible={confirmShow} onDismiss={() => setConfirmShow(false)} style={{ backgroundColor: '#e8f3fd' }}>
-              <Dialog.Title style={{ fontSize: 18 }}>{confirmContext ? 'Do you want to leave the group?' : `Remove ${removingUser?.name}?`}</Dialog.Title>
+              <Dialog.Title selectionColor='black' style={{ fontSize: 18 }}>{confirmContext ? 'Do you want to leave the group?' : `Remove ${removingUser?.name}?`}</Dialog.Title>
               <Dialog.Actions>
                 <Button onPress={() => { setRemovingUser(null); setConfirmShow(false) }} textColor='#737373' disabled={loading}>Cancel</Button>
                 <Button onPress={confirmContext ? handleGroupLeave : handleRemoveUser} textColor='#dc3545' loading={loading} disabled={loading}>{confirmContext ? 'Leave' : 'Remove'}</Button>

@@ -56,6 +56,7 @@ const SignIn = ({ navigation }) => {
                             label='Email'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
                         <TextInput
@@ -66,6 +67,7 @@ const SignIn = ({ navigation }) => {
                             label='Password'
                             mode='outlined'
                             activeOutlineColor='#167bd1'
+                            textColor='black'
                             style={styles.input}
                         />
 
@@ -75,6 +77,7 @@ const SignIn = ({ navigation }) => {
                         style={{ paddingVertical: 5, marginTop: 30, marginBottom: 20, borderRadius: 30 }}
                         mode='contained'
                         buttonColor='#167bd1'
+                        textColor='white'
                         onPress={handleSignIn}
                         labelStyle={{ fontSize: 18 }}
                         loading={loading}
@@ -87,7 +90,7 @@ const SignIn = ({ navigation }) => {
                     <Button
                         style={{ paddingVertical: 5, marginTop: 20, borderRadius: 30 }}
                         mode='outlined'
-                        textColor={theme.colors.secondary}
+                        textColor='#737373'
                         labelStyle={{ fontSize: 18 }}
                         onPress={() => navigation.navigate('SignUp')} >
                         Don't have an account? Sign up now.
