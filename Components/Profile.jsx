@@ -183,7 +183,7 @@ const Profile = ({ navigation, route }) => {
   }, [])
 
   if (profileLoading && id) {
-    return <ActivityIndicator color='#167BD1' style={{ marginVertical: 20 }} />
+    return <ActivityIndicator color='#167BD1' style={{ marginVertical: 20, flex: 1, backgroundColor: '#e8f3fd' }} />
   }
 
   if (profileError) {
@@ -307,7 +307,7 @@ const Profile = ({ navigation, route }) => {
               dismissableBackButton={!loading}
               style={{ backgroundColor: '#e8f3fd' }}>
 
-              <Dialog.Title selectionColor='black'>{`Edit ${updateField}`}</Dialog.Title>
+              <Dialog.Title style={{ color: 'black' }}>{`Edit ${updateField}`}</Dialog.Title>
               <Dialog.Content>
                 <TextInput
                   value={updateField === 'name' ? details.name : updateField === 'username' ? details.username : details.status}
@@ -326,7 +326,7 @@ const Profile = ({ navigation, route }) => {
                 />
 
                 {helperText ?
-                  <HelperText type="error" visible={true} selectionColor='#dc3545' style={{ alignSelf: 'flex-start', fontSize: 14 }} padding='none' >
+                  <HelperText type="error" visible={true} style={{ alignSelf: 'flex-start', fontSize: 14, color: '#dc3545' }} padding='none' >
                     {updateField === 'name' ? 'Name cannot be empty' : updateField === 'username' ? 'Username cannot be empty' : 'Status cannot be empty'}
                   </HelperText> : null}
               </Dialog.Content>

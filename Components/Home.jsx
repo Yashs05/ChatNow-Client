@@ -50,6 +50,7 @@ const Home = ({ navigation }) => {
                 return (
                   <View key={i}>
                     <TouchableRipple
+                      rippleColor='#d9d9d9'
                       onPress={() => handleChatPress(chats.find(item => item._id === chat._id))}>
                       <View style={[{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 15 }, chats.indexOf(chat) === chats.length - 1 ? { borderBottomWidth: 0.5, borderBottomColor: '#bfbfbf' } : null]}>
 

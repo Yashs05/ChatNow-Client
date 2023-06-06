@@ -140,6 +140,7 @@ const Search = ({ navigation, route }) => {
                     </> : null}
                 <TextInput
                     placeholder='Search by name or username'
+                    placeholderTextColor='#737373'
                     value={searchTerm}
                     mode='outlined'
                     textColor='black'
@@ -165,7 +166,7 @@ const Search = ({ navigation, route }) => {
                             {users.map((user, i) => {
                                 return (
                                     <View key={i}>
-                                        <TouchableRipple onPress={() => handlePress(user)}>
+                                        <TouchableRipple onPress={() => handlePress(user)} rippleColor='#d9d9d9' >
                                             <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 15 }}>
                                                 <Avatar.Image size={44} source={{ uri: user.profilePicture }} style={{ backgroundColor: '#d9d9d9', marginEnd: 15 }} />
 

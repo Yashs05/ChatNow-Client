@@ -214,12 +214,11 @@ const Chat = ({ navigation, route }) => {
               return (
                 <View key={i}>
                   <Pressable onPress={msg.image ? () => { setVisible2(true); setCurrentMsg(msg) } : null}>
-                    {new Date(msg.date).getDate() - new Date(msgsArray.find(item => msgsArray.indexOf(item) === i - 1)?.date).getDate() >= 1 || i === 0 ?
-
+                    {new Date(new Date(msg.date)).getTime() - new Date(new Date(msgsArray.find(item => msgsArray.indexOf(item) === i - 1)?.date).toDateString()).getTime() >= 24 * 60 * 60 * 1000 || i === 0 ?
                       <Text style={{ backgroundColor: '#e6e6e6', paddingHorizontal: 16, paddingVertical: 4, borderRadius: 8, alignSelf: 'center', marginBottom: 16, fontSize: 12 }}>
-                        {new Date().getDate() - new Date(msg.date).getDate() < 1 ? 'Today' :
-                          new Date().getDate() - new Date(msg.date).getDate() === 1 ? 'Yesterday' :
-                            moment(msg.date).format('MMM DD, YYYY')}
+                        {new Date().getTime() - new Date(new Date(msg.date).toDateString()).getTime() < 24 * 60 * 60 * 1000 ? 'Today' :
+                          new Date().getTime() - new Date(new Date(msg.date).toDateString()).getTime() === 24 * 60 * 60 * 1000 ? 'Yesterday' :
+                            moment(msg.date).format('DD/MM/YYYY')}
                       </Text> : null
                     }
 
@@ -269,6 +268,7 @@ const Chat = ({ navigation, route }) => {
           onChangeText={(value) => handleChange(value)}
           mode='outlined'
           placeholder='Message'
+          placeholderTextColor='#737373'
           outlineStyle={{ borderRadius: 30, borderWidth: 0 }}
           selectionColor='#167BD1'
           textColor='black'
